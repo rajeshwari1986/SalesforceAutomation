@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Function;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -35,6 +36,7 @@ public class SeleniumSession {
 		driver.findElement(By.id("password")).sendKeys("Lakshmi123");
 		WebElement loginButton = driver.findElement(By.name("Login"));
 		ReusableFunctions.clickOnElement(loginButton);
+		
 		String actualTitle = "Home Page ~ Salesforce - Developer Edition";
 		if (actualTitle.equals(driver.getTitle())) {
 			System.out.println("My TC 1 is passed");
@@ -57,14 +59,33 @@ public class SeleniumSession {
 		else {
 			System.out.println("Usermenu is not visible");
 		}
-		driver.findElement(By.xpath("//a[@title='Logout']")).click();
-		Thread.sleep(6000);
-		// C:\Users\user\Desktop\Collectionframework.png
-		driver.findElement(By.xpath("//*[@id=\"j_id0:uploadFileForm:uploadInputFile\"]")).sendKeys("C:\\Users\\user\\Desktop\\Collectionframework.png");
+//		driver.findElement(By.xpath("//a[@title='Logout']")).click();
+//		Thread.sleep(6000);
+//		driver.findElement(By.xpath("//*[@id=\"j_id0:uploadFileForm:uploadInputFile\"]")).sendKeys("C:\\Users\\user\\Desktop\\Collectionframework.png");
 	}
 
 	public static void main(String[] args) throws InterruptedException {
 		checkRememberMe();
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+//		alert window
+//		js.executeScript("alert('Welcome to Java script executor');");
+		WebElement newUser = driver.findElement(By.xpath("//*[@id=\"quicklinks\"]/div[2]/div/div[2]/ul/li[1]/a"));
+		//click
+		js.executeScript("arguments[0].click();", newUser);
+		//scroll
+		js.executeScript("window.scrollBy(0,600)");
+		// sendkeys
+		js.executeScript("arguments[0].value='mithun';", newUser);
+		
+		Thread.sleep(10000);
+		
+//		
+		
+		
+		
+		
+		
 //		String s = "mithun";
 //		WebElement username = driver.findElement(By.id("username"));
 //		username.sendKeys("nsjdbfusydf");
@@ -87,7 +108,24 @@ public class SeleniumSession {
 //		});
 
 //		driver.quit();
-		driver.close();
+//		driver.close();
+	}
+	
+	public static void userMenuTC06() {
+		ReusableFunctions.verifyUserMenuItems(driver);
+		ReusableFunctions.selectOptionInUserMenu(driver,"My Profile");
+		WebElement profile = driver.findElement(By.xpath("profile"));
+		ReusableFunctions.clickOnElement(profile);
+		driver.switchTo().frame(0);
+		WebElement aboutTab = driver.findElement(By.xpath("AboutTab"));
+		ReusableFunctions.clickOnElement(aboutTab);
+		WebElement postLink = driver.findElement(By.xpath("PostLink"));
+		ReusableFunctions.clickOnElement(postLink);
+		WebElement shareButton = driver.findElement(By.xpath("Sharebutton"));
+		ReusableFunctions.createAPost(postLink, shareButton, "Random messgae for a postf");
+		WebElement file = driver.findElement(By.xpath("FileUploadLink"));
+		String filepath = "xyz.png"; 
+		ReusableFunctions.uploadFile(file, shareButton, filepath);
 	}
 
 }

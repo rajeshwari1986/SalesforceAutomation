@@ -20,7 +20,7 @@ public class ReusableFunctions {
 	/**
 	 * This function will select an option from user menu drop down
 	 * 
-	 * @param driver     Webdriver
+	 * @param driver Webdriver
 	 * @param optionName "My Profile", "Logout", "", ""
 	 * @return {boolean} true if option is selected else false
 	 */
