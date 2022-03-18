@@ -1,0 +1,45 @@
+												
+Xpath - Axes methods
+Relative: any node 
+//tagname[@attribute="value"]
+//a[@title="Leads Tab"]
+
+Absolute: Root of the element. /html/body/div/a
+/html/body/div[1]/div[2]/table/tbody/tr/td[2]/table/tbody/tr/td[1]/dev/div/div/div[1]/ul/li[6]/a
+
+XPATH:  forward/backward
+
+Path expressions:
+	Last: (//a[contains(@title,'Tab')])[last()]
+	Position: (//a[contains(@title,'Tab')])[position()>=6]
+				(//a[contains(@title,'Tab')])[position() mod 2=0] Even indexed webelments
+				(//a[contains(@title,'Tab')])[position() mod 2=1]  odd indexed
+
+//a[@title="Home Tab"]
+Operators:
+	contains:
+		//a[contains(@title,'Home')]
+	starts-with:
+		//a[starts-with(@title,'Home')]
+	Or:
+	//a[contains(@title,'Tab') or text()='Home']
+	
+	AND:
+	//a[contains(@title,'Tab') and text()='Home']
+	
+Xpath-axes:
+child: 
+	//li[@id='home_Tab']//parent::ul//descendant::a   or Ancestor
+	//li[@id='Chatter_Tab']//preceding-sibling::*     or following
+	//li[@id='Chatter_Tab']//self::li
+	parent  child
+	
+	
+CSS: Cascade style sheet--> Navigate Forward direction
+ID : tagname#home_Tab
+Class: .zen-firstItem
+attribute: tagname[attribute='vaue'] 
+		   a[title='Home Tab']
+contains: a[title*='Home']
+starts-with: a[title^='Home']
+ends-with: a[title~='Tab']	
