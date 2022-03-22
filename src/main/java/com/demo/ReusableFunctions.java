@@ -35,7 +35,11 @@ public class ReusableFunctions {
 		}
 		return isOptionSelected;
 	}
-
+	
+	/**
+	 * @param driver
+	 * @return
+	 */
 	public static boolean verifyUserMenuItems(WebDriver driver) {
 		boolean isOptionVerified = true;
 		String[] userMenuOptions = { "My Profile", "My Settings", "Developer Console", "Switch to Lightning Experience",
