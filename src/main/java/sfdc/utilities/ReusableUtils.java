@@ -1,9 +1,19 @@
 package sfdc.utilities;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import sfdc.test.BaseTest;
 
 public class ReusableUtils {
 
@@ -27,4 +37,13 @@ public class ReusableUtils {
 		return isElementClickable;
 	}
 
+	public String takeScreenshot() throws IOException {
+		String dateFormat = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+		TakesScreenshot screenshot = (TakesScreenshot) BaseTest.driver;
+		File srcFile = screenshot.getScreenshotAs(OutputType.FILE);
+		String destinationPath = System.getProperty("user.dir")+"//target//Screenshots//"+dateFormat+".PNG";
+		File destination = new File(destinationPath);
+		FileUtils.copyFile(srcFile, destination);
+		return destinationPath;
+	}
 }
