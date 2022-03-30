@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class UserMenuTest extends BaseTest{
 	
-	@Test
+	@Test(groups = {"usermenu","smoke", "regression"})
 	public void selectUserMenuDropDownTC05(Method name) throws IOException, InterruptedException {
 		test = extent.createTest(name.getName());
 		loginPage.loginToApp(driver, selectEnvirnoment("prod"));

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Regression]" parallel="tests">
+  <test name="Test1(failed)" parallel="tests">
+    <classes>
+      <class name="sfdc.test.LoginTest">
+        <methods>
+          <include name="launchAPP"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- sfdc.test.LoginTest -->
+      <class name="sfdc.test.UserMenuTest">
+        <methods>
+          <include name="setup"/>
+          <include name="selectUserMenuDropDownTC05" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- sfdc.test.UserMenuTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+  <test name="Test(failed)" parallel="tests">
+    <classes>
+      <class name="sfdc.test.LoginTest">
+        <methods>
+          <include name="launchAPP"/>
+          <include name="loginAccounts" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="loginErrorMessageTC01"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- sfdc.test.LoginTest -->
+      <class name="sfdc.test.UserMenuTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- sfdc.test.UserMenuTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Regression] -->

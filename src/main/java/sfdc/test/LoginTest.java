@@ -20,7 +20,7 @@ public class LoginTest extends BaseTest {
 		driver.get(selectEnvirnoment("prod"));
 	}
 
-	@Test(invocationCount = 2)
+	@Test(invocationCount = 0, groups = {"regression", "login"})
 	public void loginErrorMessageTC01(Method name) throws IOException {
 		if (reusableUtils.isElementDisplayed(loginPage.username, driver)) {
 
@@ -39,7 +39,7 @@ public class LoginTest extends BaseTest {
 		}
 	}
 
-	@Test(dataProvider = "testAccounts", dataProviderClass = LoginTest.class)
+	@Test(dataProvider = "testAccounts", dataProviderClass = LoginTest.class, groups = "smoke", dependsOnGroups = "login")
 	public void loginAccounts(String username, String password, Method name) throws IOException {
 //		test = extent.createTest(name.getName());
 		if (reusableUtils.isElementDisplayed(loginPage.username, driver)) {
@@ -63,7 +63,7 @@ public class LoginTest extends BaseTest {
 	
 	@DataProvider(name = "testAccounts")
 	public Object[][] userAccounts(){
-		return new Object[][] {{"mithun.r@tekarch.com","mithun123"},{"lakshmi@gmail.com","laskmi234"},{"",""}};
+		return new Object[][] {{"mithun.r@tekarch.com","mithun123"}};
 	}
 	
 	

@@ -2,6 +2,7 @@ package com.listeners;
 
 import java.io.IOException;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -12,7 +13,6 @@ import sfdc.test.BaseTest;
 import sfdc.utilities.ReusableUtils;
 
 public class TestListeners implements ITestListener {
-	
 	ReusableUtils ru = new ReusableUtils();
 
 	@Override

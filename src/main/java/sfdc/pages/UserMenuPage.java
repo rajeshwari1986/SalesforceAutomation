@@ -52,4 +52,10 @@ public class UserMenuPage {
 		}
 		return isUserNameValid;
 	}
+	
+	public void selectOptionFromUserMenu(String optionName) {
+		
+		
+		
+	}
 }

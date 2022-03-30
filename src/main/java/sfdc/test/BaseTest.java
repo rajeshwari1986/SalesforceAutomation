@@ -6,6 +6,7 @@ import java.util.Date;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterTest;
@@ -32,23 +33,22 @@ public class BaseTest {
 	public static LoginPage loginPage = null;
 	public static ReusableUtils reusableUtils = null;
 	public static UserMenuPage userMenuPage = null;
-	
+
 	@BeforeTest
 	public void setup() {
 		initializeReports();
-		driver = getDriver("chrome");
+		driver = getDriver("chrome", false);
 		loginPage = new LoginPage(driver);
 		reusableUtils = new ReusableUtils();
 		userMenuPage = new UserMenuPage(driver);
-		
+
 	}
-	
+
 	@AfterTest
 	public void tearDown() {
 		driver.close();
 		extent.flush();
 	}
-	
 
 	/**
 	 * This function will return browser configuration
@@ -56,12 +56,17 @@ public class BaseTest {
 	 * @param sBrowserName eg: chrome, safari, firefox
 	 * @return driver
 	 */
-	public WebDriver getDriver(String sBrowserName) {
+	public WebDriver getDriver(String sBrowserName, boolean headless) {
 		String browserName = sBrowserName.toLowerCase();
 		switch (browserName) {
 		case "chrome":
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			if (headless == true) {
+				driver = new ChromeDriver(headLessMode());
+			} else {
+				driver = new ChromeDriver();
+			}
+
 //			test.log(Status.INFO, "ChromeBrowser is initialized");
 			break;
 		case "firefox":
@@ -81,7 +86,13 @@ public class BaseTest {
 		return driver;
 	}
 
-	
+	public ChromeOptions headLessMode() {
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1080", "--ignore-certificate-errors");
+
+		return options;
+	}
+
 	public String selectEnvirnoment(String envirnoment) throws IOException {
 		String appURL = null;
 		switch (envirnoment) {
@@ -99,13 +110,18 @@ public class BaseTest {
 		}
 		return appURL;
 	}
-	
+
 	public void initializeReports() {
 		String dateFormat = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
-		String reportPath = System.getProperty("user.dir")+"//target//Reports//"+dateFormat+"_SFDCReport.html";
+		String reportPath = System.getProperty("user.dir") + "//target//Reports//" + dateFormat + "_SFDCReport.html";
 		extent = new ExtentReports();
 		report = new ExtentHtmlReporter(reportPath);
 		extent.attachReporter(report);
+	}
+
+	public void logoutFromApp() {
+		userMenuPage.userMenuDropDown.click();
+		userMenuPage.selectOptionFromUserMenu("Logout");
 	}
 
 }
