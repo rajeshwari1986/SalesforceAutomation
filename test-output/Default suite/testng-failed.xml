@@ -5,11 +5,8 @@
     <classes>
       <class name="sfdc.test.LoginTest">
         <methods>
-          <include name="launchAPP"/>
-          <include name="loginAccounts" invocation-numbers="0 1 2"/>
-          <include name="setup"/>
-          <include name="loginErrorMessageTC01"/>
-          <include name="tearDown"/>
+          <include name="loginErrorMessageTC01" invocation-numbers="0"/>
+          <include name="suiteLevelConfigs"/>
         </methods>
       </class> <!-- sfdc.test.LoginTest -->
     </classes>

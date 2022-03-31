@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -59,7 +59,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="group-Regression">
-                    <span>3 groups</span>
+                    <span>4 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 2 failed,   </span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,15 +102,24 @@
                     <div class="method-list-content failed suite-Regression">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Regression" title="sfdc.test.LoginTest" hash-for-method="loginAccounts(mithun.r@tekarch.com, mithun123, public void sfdc.test.LoginTest.loginAccounts(java.lang.String,java...)">loginAccounts(mithun.r@tekarch.com, mithun123, public void sfdc.test.LoginTest.loginAccounts(java.lang.String,java...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Regression" title="sfdc.test.UserMenuTest" hash-for-method="selectUserMenuDropDownTC05(public void sfdc.test.UserMenuTest.selectUserMenuDropDownTC05(java.lang.reflect.Method) throws java....)">selectUserMenuDropDownTC05(public void sfdc.test.UserMenuTest.selectUserMenuDropDownTC05(java.lang.reflect.Method) throws java....)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Regression -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Regression" class="hide-methods passed suite-Regression"> (hide)</a> <!-- hide-methods passed suite-Regression -->
+                      <a href="#" panel-name="suite-Regression" class="show-methods passed suite-Regression"> (show)</a> <!-- show-methods passed suite-Regression -->
+                    </span>
+                    <div class="method-list-content passed suite-Regression">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Regression" title="sfdc.test.LoginTest" hash-for-method="loginErrorMessageTC01(public void sfdc.test.LoginTest.loginErrorMessageTC01(java.lang.reflect.Method) throws java.io.IOExc...)">loginErrorMessageTC01(public void sfdc.test.LoginTest.loginErrorMessageTC01(java.lang.reflect.Method) throws java.io.IOExc...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Regression -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -125,46 +134,6 @@
           <div class="suite-Regression-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">sfdc.test.LoginTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginAccounts(mithun.r@tekarch.com, mithun123, public void sfdc.test.LoginTest.loginAccounts(java.lang.String,java...)">
-                  </a> <!-- loginAccounts(mithun.r@tekarch.com, mithun123, public void sfdc.test.LoginTest.loginAccounts(java.lang.String,java...) -->
-                  <span class="method-name">loginAccounts</span>
-                  <span class="parameters">(mithun.r@tekarch.com, mithun123, public void sfdc.test.LoginTest.loginAccounts(java.lang.String,java.lang.String,java.lang.reflect.Method) throws java.io.IOException)</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=99.0.4844.84)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;TEKARCH&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:60401}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b34b44b8638636932b95613bc9699c1a
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy12.clear(Unknown Source)
-	at sfdc.test.LoginTest.loginAccounts(LoginTest.java:49)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Regression-class-failed -->
-          <div class="suite-Regression-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
               <span class="class-name">sfdc.test.UserMenuTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -174,13 +143,13 @@ Session ID: b34b44b8638636932b95613bc9699c1a
                   </a> <!-- selectUserMenuDropDownTC05(public void sfdc.test.UserMenuTest.selectUserMenuDropDownTC05(java.lang.reflect.Method) throws java....) -->
                   <span class="method-name">selectUserMenuDropDownTC05</span>
                   <span class="parameters">(public void sfdc.test.UserMenuTest.selectUserMenuDropDownTC05(java.lang.reflect.Method) throws java.io.IOException,java.lang.InterruptedException)</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=99.0.4844.84)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: #userNavLabel
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;TEKARCH&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.84, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:60401}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: b34b44b8638636932b95613bc9699c1a
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 96.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220126154723, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 6372, moz:profile: C:\Users\user\AppData\Local..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 23e949d9-9cf5-4f06-9d21-388fe1c4eb9c
 *** Element info: {Using=id, value=userNavLabel}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
@@ -194,7 +163,7 @@ Session ID: b34b44b8638636932b95613bc9699c1a
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy12.getText(Unknown Source)
+	at com.sun.proxy.$Proxy15.getText(Unknown Source)
 	at sfdc.pages.UserMenuPage.verifyUserName(UserMenuPage.java:50)
 	at sfdc.test.UserMenuTest.selectUserMenuDropDownTC05(UserMenuTest.java:16)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
@@ -207,6 +176,22 @@ Session ID: b34b44b8638636932b95613bc9699c1a
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Regression-class-failed -->
+          <div class="suite-Regression-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">sfdc.test.LoginTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginErrorMessageTC01(public void sfdc.test.LoginTest.loginErrorMessageTC01(java.lang.reflect.Method) throws java.io.IOExc...)">
+                  </a> <!-- loginErrorMessageTC01(public void sfdc.test.LoginTest.loginErrorMessageTC01(java.lang.reflect.Method) throws java.io.IOExc...) -->
+                  <span class="method-name">loginErrorMessageTC01</span>
+                  <span class="parameters">(public void sfdc.test.LoginTest.loginErrorMessageTC01(java.lang.reflect.Method) throws java.io.IOException)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Regression-class-passed -->
         </div> <!-- panel Regression -->
         <div panel-name="test-xml-Regression" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -216,17 +201,18 @@ Session ID: b34b44b8638636932b95613bc9699c1a
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Regression&quot; parallel=&quot;tests&quot;&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;Test&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;sfdc.test.LoginTest&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;Test1&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Regression&quot; parallel=&quot;tests&quot;&gt;
+  &lt;parameter name=&quot;browser name&quot; value=&quot;firefox&quot;/&gt;
+  &lt;test name=&quot;Chrometests&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;sfdc.test.UserMenuTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test1 --&gt;
+  &lt;/test&gt; &lt;!-- Chrometests --&gt;
+  &lt;test name=&quot;Thread2&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;sfdc.test.LoginTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Thread2 --&gt;
 &lt;/suite&gt; &lt;!-- Regression --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -238,10 +224,10 @@ Session ID: b34b44b8638636932b95613bc9699c1a
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">Chrometests (1 class)</span>
               </li>
               <li>
-                <span class="test-name">Test1 (1 class)</span>
+                <span class="test-name">Thread2 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -252,8 +238,20 @@ Session ID: b34b44b8638636932b95613bc9699c1a
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
+              <span class="test-group-name">login</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginErrorMessageTC01</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
+            <div class="test-group">
               <span class="test-group-name">regression</span>
               <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">loginErrorMessageTC01</span>
+                <br/>
+              </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">selectUserMenuDropDownTC05</span>
                 <br/>
@@ -262,10 +260,6 @@ Session ID: b34b44b8638636932b95613bc9699c1a
             <div class="test-group">
               <span class="test-group-name">smoke</span>
               <br/>
-              <div class="method-in-group">
-                <span class="method-in-group-name">loginAccounts</span>
-                <br/>
-              </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">selectUserMenuDropDownTC05</span>
                 <br/>
@@ -299,16 +293,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'selectUserMenuDropDownTC05')
 data.setCell(0, 2, 'sfdc.test.UserMenuTest')
-data.setCell(0, 3, 36945);
+data.setCell(0, 3, 9041);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'loginAccounts')
+data.setCell(1, 1, 'loginErrorMessageTC01')
 data.setCell(1, 2, 'sfdc.test.LoginTest')
-data.setCell(1, 3, 21598);
+data.setCell(1, 3, 8453);
 window.suiteTableData['Regression']= { tableData: data, tableDiv: 'times-div-Regression'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 58 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Regression">
               </div> <!-- times-div-Regression -->
             </div> <!-- times-div -->
@@ -323,9 +317,16 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Regression" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">sfdc.test.LoginTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">loginAccounts</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Regression" class="panel">
@@ -334,57 +335,58 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">sfdc.test.UserMenuTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setup</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">sfdc.test.LoginTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">setup</span>
+              <div class="configuration-suite before">
+                <span class="method-name">suiteLevelConfigs</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-test before">
+                <span class="method-name">setup(firefox)</span>
+                <span class="method-start">100 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="configuration-method before">
-                <span class="method-name">launchAPP</span>
-                <span class="method-start">5951 ms</span>
-              </div> <!-- configuration-method before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">sfdc.test.UserMenuTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setup(firefox)</span>
+                <span class="method-start">107 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">selectUserMenuDropDownTC05(public void sfdc.test.UserMenuTest.selectUserMenuDropDownTC05(java.lang.reflect.Method) throws java....)</span>
-                <span class="method-start">5951 ms</span>
+                <span class="method-start">23607 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">sfdc.test.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">launchAPP</span>
+                <span class="method-start">23608 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">loginAccounts(mithun.r@tekarch.com, mithun123, public void sfdc.test.LoginTest.loginAccounts(java.lang.String,java...)</span>
-                <span class="method-start">9184 ms</span>
+                <span class="method-name">loginErrorMessageTC01(public void sfdc.test.LoginTest.loginErrorMessageTC01(java.lang.reflect.Method) throws java.io.IOExc...)</span>
+                <span class="method-start">29371 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">sfdc.test.UserMenuTest</div> <!-- chronological-class-name -->
               <div class="configuration-test after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">42911 ms</span>
+                <span class="method-start">32671 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">sfdc.test.LoginTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method after">
+                <span class="method-name">afterConfigs</span>
+                <span class="method-start">37827 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">55077 ms</span>
+                <span class="method-start">37828 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

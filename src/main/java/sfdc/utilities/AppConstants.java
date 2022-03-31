@@ -8,6 +8,7 @@ public class AppConstants {
 			+ "\\src\\main\\java\\sfdc\\testdata\\appEnvirnoments.properties";
 	public static final String PAGE_VALIDATIONS_FILE_PATH = System.getProperty("user.dir")
 			+ "\\src\\main\\java\\sfdc\\testdata\\pagevalidations.properties";
-
+	public static final String LOG4J_PROPERTIES_PATH = System.getProperty("user.dir")
+			+ "\\src\\main\\java\\sfdc\\configs\\log4jConfig.properties";
 	
 }
