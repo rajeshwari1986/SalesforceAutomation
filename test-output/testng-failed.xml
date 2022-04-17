@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression]" parallel="tests">
+  <parameter name="browser name" value="firefox"/>
+  <test name="Chrometests(failed)" parallel="tests">
+    <classes>
+      <class name="sfdc.test.UserMenuTest">
+        <methods>
+          <include name="setup"/>
+          <include name="selectUserMenuDropDownTC05" invocation-numbers="0"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- sfdc.test.UserMenuTest -->
+      <class name="sfdc.test.LoginTest">
+        <methods>
+          <include name="launchAPP"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="suiteLevelConfigs"/>
+          <include name="afterConfigs"/>
+        </methods>
+      </class> <!-- sfdc.test.LoginTest -->
+    </classes>
+  </test> <!-- Chrometests(failed) -->
+</suite> <!-- Failed suite [Regression] -->

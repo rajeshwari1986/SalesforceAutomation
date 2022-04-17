@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [login]">
+  <test name="LoginTest(failed)">
+    <classes>
+      <class name="sfdc.test.LoginTest">
+        <methods>
+          <include name="launchAPP"/>
+          <include name="loginAccounts"/>
+          <include name="setup"/>
+          <include name="loginErrorMessageTC01" invocation-numbers="0 0"/>
+        </methods>
+      </class> <!-- sfdc.test.LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+</suite> <!-- Failed suite [login] -->

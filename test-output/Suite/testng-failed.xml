@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
+  <test name="Test(failed)" parallel="classes">
+    <classes>
+      <class name="sfdc.test.UserMenuTest">
+        <methods>
+          <include name="selectUserMenuDropDownTC05" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- sfdc.test.UserMenuTest -->
+      <class name="sfdc.test.LoginTest">
+        <methods>
+          <include name="launchAPP"/>
+          <include name="loginAccounts" invocation-numbers="0 1 2"/>
+          <include name="setup"/>
+          <include name="loginErrorMessageTC01" invocation-numbers="0 0"/>
+        </methods>
+      </class> <!-- sfdc.test.LoginTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
